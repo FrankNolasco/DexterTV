@@ -1,0 +1,17 @@
+{% extends 'user/template.html' %} 
+
+{% block css_imports %}
+<link rel="stylesheet" href="../../static/css/multimediaDisplays.css">
+{% endblock %}
+
+{% block main %}
+    <h3>Series</h3>
+    <div class="grid-content-container">
+        {% for serie in series %}
+            <a href="/user/serie/{{serie.id}}" class="card-item-multimedia">
+                <img src={{ serie.portada_url }} alt="">
+                <span>{{serie.nombre}}<span>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'user/template.html' %} 
+
+{% block css_imports %}
+<link rel="stylesheet" href="../../static/css/multimediaDisplays.css">
+{% endblock %}
+
+{% block main %}
+    <h3>PELICULAS</h3>
+    <div class="grid-content-container">
+        {% for pelicula in peliculas %}
+            <a href="/user/pelicula/{{pelicula.id}}" class="card-item-multimedia">
+                <img src={{ pelicula.portada_url }} alt="">
+                <span>{{pelicula.nombre}}<span>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

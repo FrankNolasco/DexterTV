@@ -1,0 +1,24 @@
+{% extends 'user/template.html' %} 
+
+{% block css_imports %}
+<link rel="stylesheet" href="../../static/css/contenidoIndividual.css">
+{% endblock %}
+
+{% block main %}
+    <div class="portada-multimedia">   
+        <div class="degradade"></div>
+        <img src={{deporte.portada_url}}  alt="..."/>
+        <div class="portada-content">
+            <h1>{{ deporte.nombre }}</h1>
+            <button>
+                Ver trailer
+            </button>
+            <button>
+                Reproducir
+            </button>
+            <p>
+                {{ deporte.descripcion }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

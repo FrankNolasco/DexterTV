@@ -1,0 +1,17 @@
+{% extends 'user/template.html' %} 
+
+{% block css_imports %}
+<link rel="stylesheet" href="../../static/css/multimediaDisplays.css">
+{% endblock %}
+
+{% block main %}
+    <h3>DEPORTES</h3>
+    <div class="grid-content-container">
+        {% for deporte in deportes %}
+            <a href="/user/deporte/{{deporte.id}}" class="card-item-multimedia">
+                <img src={{ deporte.portada_url }} alt="">
+                <span>{{deporte.nombre}}<span>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

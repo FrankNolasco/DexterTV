@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEXTER TV</title>
+    <link rel="stylesheet" href="../../static/css/normalize.css">
+    <link rel="stylesheet" href="../../static/css/init.css">
+    {% block css_imports %}
+    {% endblock css_imports %}
+</head>
+<body>
+    <div class="background-dark-image-user"></div>
+    <div class="background-dark-theme">
+        <div class="navbar">
+            <div class="nav-links">
+                <div class="Logo">
+                    <span>DEXTER</span>
+                    <strong>TV</strong>
+                </div>
+                <a href="/user/peliculas" class="nav-link">
+                    Peliculas
+                </a>
+                <a href="/user/series" class="nav-link">
+                    Series
+                </a>
+                <a href="/user/deportes" class="nav-link">
+                    Deportes
+                </a>
+            </div>
+                        
+            <div class="user">
+                SuperUser
+            </div>
+        </div>
+        <main class="container">
+            {% block main %}
+            {% endblock main %}
+        </main>
+    </div>
+</body>
+</html>
