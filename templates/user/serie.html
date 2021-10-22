@@ -10,12 +10,12 @@
         <img src={{serie.portada_url}}  alt="..."/>
         <div class="portada-content">
             <h1>{{ serie.nombre }}</h1>
-            <button>
+            <a href={{serie.trailer}} target="_blank" class="nav-link">
                 Ver trailer
-            </button>
-            <button>
-                Reproducir
-            </button>
+            </a>
+            <a href="/user/temporadas/{{serie.id}}" class="nav-link">
+                Ver temporadas
+            </a>
             <p>
                 {{ serie.descripcion }}
             </p>

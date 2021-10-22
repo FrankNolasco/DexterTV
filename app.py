@@ -149,6 +149,17 @@ def user_serie(id):
     serie = Serie.query.get(id)
     return render_template("user/serie.html", serie = serie)
 
+
+@app.route("/user/temporadas/<int:id>", methods=["GET"])
+def user_temp_serie(id):
+    temporadas = db.session.query(Temporada).filter_by(serie_id = id).all()
+    return render_template('user/temporadas.html', temporadas = temporadas)
+
+@app.route("/user/capitulos/<int:id>", methods=["GET"])
+def user_capitulo_serie(id):
+    capitulos = db.session.query(Episodio).filter_by(temporada_id = id).all()
+    return render_template('user/capitulos.html', capitulos = capitulos)
+
 #Administracion routes
 @app.route("/log-in/validate", methods=["POST"])
 def login_validate_user():
@@ -400,6 +411,8 @@ def modificar_series():
 @app.route("/admin/temporadas/<int:id_serie>", methods=["GET"])
 def admin_temporadas(id_serie):
     return render_template("administrador/temporadas.html", id = id_serie)
+
+
 
 @app.route("/admin/buscar/temporada/<int:id>", methods=["GET"])
 def buscar_temporada(id):

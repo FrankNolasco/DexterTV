@@ -10,12 +10,9 @@
         <img src={{pelicula.portada_url}}  alt="..."/>
         <div class="portada-content">
             <h1>{{ pelicula.nombre }}</h1>
-            <button>
-                Ver trailer
-            </button>
-            <button>
+            <a href={{pelicula.video}} target="_blank" class="nav-link">
                 Reproducir
-            </button>
+            </a>
             <p>
                 {{ pelicula.descripcion }}
             </p>

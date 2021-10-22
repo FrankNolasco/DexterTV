@@ -1,0 +1,29 @@
+{% extends 'user/template.html' %} 
+
+{% block css_imports %}
+<link rel="stylesheet" href="../../static/css/series.css">
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="temporadas">
+            {% for temporada in temporadas %}
+                <div class="card" style="background-color: var(--card-transparent);">
+                    <div>
+                        <h3>{{temporada.nombre}}</h3>
+                        <p>{{temporada.descripcion}}</p>
+                    </div>
+                    <div>
+                        <a href={{temporada.trailer}} target="_blank" class="nav-link">
+                            Ver trailer
+                        </a>
+                        <a href="/user/capitulos/{{temporada.id}}" target="_blank" class="nav-link">
+                            Ver capitulos
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+         
+        </div>
+    </div>
+{% endblock %}

@@ -10,12 +10,9 @@
         <img src={{deporte.portada_url}}  alt="..."/>
         <div class="portada-content">
             <h1>{{ deporte.nombre }}</h1>
-            <button>
-                Ver trailer
-            </button>
-            <button>
+            <a href={{deporte.video}} target="_blank" class="nav-link">
                 Reproducir
-            </button>
+            </a>
             <p>
                 {{ deporte.descripcion }}
             </p>

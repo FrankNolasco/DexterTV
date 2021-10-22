@@ -1,0 +1,11 @@
+.temporadas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    color: white;
+    max-width: 100%;
+}
+.temporadas .card {
+    width: 22rem;
+    align-self: center;
+}
