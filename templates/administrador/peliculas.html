@@ -1,0 +1,40 @@
+{% extends 'administrador/template.html' %} {% block css_imports %} {% endblock
+%} {% block formBase %}
+<div>
+  <label for="nombre">NOMBRE</label>
+  <input id="nombre" name="nombre" class="_input"  required/>
+</div>
+<div>
+  <label for="descripcion">DESCRIPCION</label>
+  <input id="descripcion" name="descripcion" class="_input"  required/>
+</div>
+<div>
+  <label for="portada_url">PORTADA (URL)</label>
+  <input id="portada_url" name="portada_url" class="_input"  required/>
+</div>
+<div>
+  <label for="fecha_hora">FECHA DE ESTRENO (ORIGINAL)</label>
+  <input id="fecha_hora" name="fecha_hora" class="_input" type="date"  required/>
+</div>
+<div>
+  <label for="duracion">DURACION</label>
+  <input id="duracion" name="duracion" class="_input"  required/>
+</div>
+<div>
+  <label for="video">VIDEO (URL)</label>
+  <input id="video" name="video" class="_input"  required/>
+</div>
+<div>
+  <label for="categoria_id">CATEGORIA</label>
+  <select class="_input" id="categoria_id" name="categoria_id" aria-label="Default select example" required>
+    <option selected>Seleccione una categoría</option>
+       {% for categoria in categorias %}
+              <option value="{{categoria.id}}" >
+                  {{categoria.nombre}}
+              </option>
+      {% endfor %}
+  </select>
+</div>
+{% endblock %} {% block js_files %}
+<script src="../../static/js/admin/peliculas.js"></script>
+{% endblock %}

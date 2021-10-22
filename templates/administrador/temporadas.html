@@ -1,0 +1,18 @@
+{% extends 'administrador/template_2.html' %} {% block css_imports %} {% endblock
+%} {% block formBase %}
+<div>
+  <label for="nombre">NOMBRE</label>
+  <input id="nombre" name="nombre" class="_input" required />
+</div>
+<div>
+  <label for="descripcion">DESCRIPCION</label>
+  <input id="descripcion" name="descripcion" class="_input" required />
+</div>
+<div>
+  <label for="trailer">TRAILER (URL)</label>
+  <input id="trailer" name="trailer" class="_input" required />
+</div>
+<input id="serie_id" name="serie_id" value={{id}} class="disabled" required/>
+{% endblock %} {% block js_files %}
+<script src="../../static/js/admin/temporadas.js"></script>
+{% endblock %}

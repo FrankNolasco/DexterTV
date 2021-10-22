@@ -35,20 +35,17 @@
                     Usuarios
                 </a>
             </div>
-                        
+
             <a href="/login" class="nav-link">
                 Cerrar Sesión
             </a>
         </div>
         <main class="container">
             <div class="card menu-inline">
-                <input class="_input" id="input_search" placeholder="Escribe aquí para buscar"/>
-                <button id="button" class="_btn _btn__primary">Buscar</button>
+                <input class="_input" value={{id}} id="input_search" placeholder="Id de serie" disabled/>
+                <button id="button" class="_btn _btn__primary">VER LISTA</button>
                 <button class="menu-inline__item" id="item_nuevo">
                     AGREGAR
-                </button>
-                <button class="menu-inline__item" id="item_modificar" disabled>
-                    MODIFICAR
                 </button>
             </div>
             <div class="card" style="width: 100%;">
@@ -77,11 +74,10 @@
         let TitleModify = $('#form-title-modify')
         let Form = $('#form');
         let dataSearched = $('#data_searched');
-        let ButtonModificar = $('#item_modificar')
         let InputSearch = $('#input_search')
     </script>
     {% block js_files %}
     {% endblock js_files %}
-    <script src="../../static/js/datable.js"></script>
+    <script src="../../static/js/datable_2.js"></script>
 </body>
 </html>

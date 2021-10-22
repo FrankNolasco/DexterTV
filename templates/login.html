@@ -10,16 +10,17 @@
 <body>
     <div class="background-dark-image"></div>
     <div class="background-dark-theme">
-        <form class="login-form">
+        <form class="login-form" action="/log-in/validate" method="post">
             <h2>Bienvenido a DEXTER TV</h2>
             <div>
                 <label for="username">Usuario</label>
-                <input type="text" id="username" name="username" required/>
+                <input class="_input" type="text" id="username" name="username" required/>
             </div>
             <div>
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required/>
+                <input class="_input" type="password" id="password" name="password" required/>
             </div>
+            <label for="username" style="color:red">{{ msg }}</label>
             <p>
                 Al iniciar sesión en nuestra pagina web, aceptas todos nuestras politicas de privacidad y cookies.
             </p>

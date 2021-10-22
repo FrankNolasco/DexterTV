@@ -1,0 +1,33 @@
+{% extends 'administrador/template.html' %} {% block css_imports %} {% endblock
+    %} {% block formBase %}
+    <div>
+      <label for="nombres">NOMBRE</label>
+      <input id="nombres" name="nombres" class="_input"  required/>
+    </div>
+    <div>
+      <label for="perfil_url">DESCRIPCION</label>
+      <input id="perfil_url" name="perfil_url" class="_input"  required/>
+    </div>
+    <div>
+      <label for="username">username</label>
+      <input id="username" name="username" class="_input"  required/>
+    </div>
+    <div>
+      <label for="password">password</label>
+      <input id="password" name="password" type="password" class="_input"  required/>
+    </div>
+    <div>
+      <label for="rol_id">ROL</label>
+      <select class="_input" id="rol_id" name="rol_id" aria-label="Default select example" required>
+        <option selected>Seleccione una categoría</option>
+           {% for rol in roles %}
+                  <option value="{{rol.id}}" >
+                      {{rol.nombre}}
+                  </option>
+          {% endfor %}
+      </select>
+    </div>
+    {% endblock %} {% block js_files %}
+    <script src="../../static/js/admin/usuarios.js"></script>
+    {% endblock %}
+    
